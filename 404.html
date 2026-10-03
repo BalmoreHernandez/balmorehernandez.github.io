@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0E1A2E">
+<meta name="robots" content="noindex">
+<title>Balmore Hernandez · Página no encontrada</title>
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<script>
+/* Redirige direcciones viejas o mal escritas a la app correcta (conserva ?query y #hash).
+   Cambia PRESUPUESTO_LIVE a true cuando balmorehernandez.com/presupuesto/ esté publicada. */
+(function () {
+  var PRESUPUESTO_LIVE = false;
+  var p = location.pathname.toLowerCase().replace(/\/+$/, "");
+  var rest = location.search + location.hash;
+  var fit = /^\/(fitness|fit|app|apps|gym|rutina|app-fitness-principiantes)(\/|$)/;
+  var bud = /^\/(presupuesto|presupuestos|budget|finanzas|finances|dinero|money)(\/|$)/;
+  var to = null;
+  if (fit.test(p)) to = "/fitness/";
+  else if (bud.test(p)) to = PRESUPUESTO_LIVE ? "/presupuesto/" : "/?soon=presupuesto#app-presupuesto";
+  else if (/^\/(inicio|home|index\.html?|links?)$/.test(p)) to = "/";
+  if (to && to.indexOf("?") < 0) to += rest;
+  if (to && to !== location.pathname + rest) location.replace(to);
+})();
+</script>
+<link rel="stylesheet" href="/style.css">
+<style>
+.nf{min-height:100vh;display:grid;place-items:center;padding:24px}
+.nf .card{max-width:440px;text-align:center;align-items:center}
+.nf img{width:72px;height:72px}
+.nf h1{margin:4px 0 0;font-size:26px;font-weight:900}
+.nf .btns{display:grid;gap:10px;width:100%;margin-top:6px}
+.nf .btn.alt{background:var(--bg);color:var(--navy)}
+</style>
+</head>
+<body>
+<div class="nf">
+  <div class="card">
+    <img src="/logo-badge.svg" alt="Balmore Hernandez" width="72" height="72">
+    <h1 id="h">Esta página no existe</h1>
+    <p id="p">Puede que el enlace esté viejo. Aquí tienes mis apps:</p>
+    <div class="btns">
+      <a class="btn" href="/" id="b1">Ir al inicio</a>
+      <a class="btn alt" href="/fitness/" id="b2">Fitness para principiantes</a>
+    </div>
+    <p class="mont" lang="en" style="font-weight:800;color:var(--navy);margin-top:6px">Master your body, mind and money.</p>
+  </div>
+</div>
+<script>
+try {
+  var en = (localStorage.getItem("bhHub_lang") || (navigator.language || "es").slice(0, 2)) === "en";
+  if (en) { document.documentElement.lang = "en"; document.title = "Balmore Hernandez · Page not found";
+    h.textContent = "This page doesn't exist"; p.textContent = "The link may be old. Here are my apps:"; b1.textContent = "Go to the home page"; b2.textContent = "Beginner fitness"; }
+} catch (e) {}
+</script>
+</body>
+</html>

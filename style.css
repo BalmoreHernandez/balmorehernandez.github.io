@@ -1,0 +1,88 @@
+/* Balmore Hernandez · hub (G8b: crema, navy, vino) */
+@font-face{font-family:"Montserrat";font-style:normal;font-weight:100 900;font-display:swap;src:url(/fonts/montserrat.woff2) format("woff2")}
+@font-face{font-family:"Inter";font-style:normal;font-weight:100 900;font-display:swap;src:url(/fonts/inter.woff2) format("woff2")}
+:root{--bg:#F6F1E9;--card:#FFFFFF;--navy:#0E1A2E;--navy2:#17263F;--accent:#A3263A;--accent-h:#8C1F31;--cream:#F6F1E9;--gold:#7E5F28;--muted:#566074;--line:#E4DCCF;--radius:22px}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--navy);font:400 16px/1.55 Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--accent)}
+h1,h2,h3,.mont{font-family:Montserrat,Inter,system-ui,sans-serif}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+.skip{position:absolute;left:-999px}.skip:focus{left:12px;top:12px;background:#fff;padding:8px 12px;border-radius:10px;z-index:9}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+
+/* Hero */
+.hero{background:var(--navy);color:var(--cream);border-radius:0 0 34px 34px;padding:max(14px,env(safe-area-inset-top)) 0 44px;position:relative;overflow:hidden}
+.hero:after{content:"";position:absolute;right:-90px;top:-60px;width:320px;height:320px;border-radius:50%;background:radial-gradient(circle,rgba(163,38,58,.32),rgba(163,38,58,0) 70%);pointer-events:none}
+.top{display:flex;align-items:center;justify-content:space-between;gap:12px;position:relative;z-index:1}
+.brand{display:flex;align-items:center;gap:10px;color:var(--cream);text-decoration:none;font:800 15px/1 Montserrat,sans-serif;letter-spacing:.02em}
+.brand img{width:40px;height:40px;display:block}
+.lang{appearance:none;border:1.5px solid rgba(246,241,233,.45);background:transparent;color:var(--cream);font:700 13px/1 Montserrat,sans-serif;letter-spacing:.08em;padding:10px 14px;border-radius:999px;cursor:pointer;min-height:40px}
+.lang:hover{background:rgba(246,241,233,.1)}
+.hero-in{position:relative;z-index:1;padding-top:38px;display:grid;gap:26px;align-items:center}
+.hero .eyebrow{font:700 12px/1 Montserrat,sans-serif;letter-spacing:.18em;text-transform:uppercase;color:#C9BFB0;margin:0 0 14px}
+.hero h1{font-weight:900;font-size:clamp(34px,9.4vw,60px);line-height:1.02;letter-spacing:-.02em;margin:0}
+.hero h1 span{display:block}
+.hero h1 .m{color:#F08A9A}
+.hero p.lead{color:#D9D2C6;font-size:17px;margin:18px 0 0;max-width:520px}
+.hero .cta-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.hero-mark{display:none}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:50px;padding:0 22px;border-radius:999px;background:var(--accent);color:var(--cream);font:700 15px/1 Montserrat,sans-serif;text-decoration:none;border:0;cursor:pointer;transition:background .15s,transform .15s}
+.btn:hover{background:var(--accent-h)}.btn:active{transform:scale(.98)}
+.btn.ghost{background:transparent;color:var(--cream);box-shadow:inset 0 0 0 1.5px rgba(246,241,233,.5)}
+.btn.ghost:hover{background:rgba(246,241,233,.1)}
+.btn[aria-disabled=true]{background:#EDE6DA;color:var(--muted);cursor:default;pointer-events:none}
+.btn svg{width:18px;height:18px}
+
+/* Sections */
+main.wrap{padding-top:34px;padding-bottom:10px}
+.sec-h{font:800 13px/1 Montserrat,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin:0 0 14px}
+.apps{display:grid;gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:22px;display:flex;flex-direction:column;gap:14px;box-shadow:0 1px 0 rgba(14,26,46,.03),0 10px 30px -18px rgba(14,26,46,.25)}
+.card-top{display:flex;align-items:center;gap:14px}
+.ico{width:54px;height:54px;border-radius:16px;background:var(--bg);display:grid;place-items:center;flex:none}
+.ico svg{width:28px;height:28px;stroke:var(--navy);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.ico svg .a{stroke:var(--accent)}
+.card h3{margin:0;font-size:20px;font-weight:800;line-height:1.2}
+.chip{display:inline-block;font:700 11px/1 Montserrat,sans-serif;letter-spacing:.1em;text-transform:uppercase;padding:6px 9px;border-radius:999px;margin-top:6px}
+.chip.live{background:#E9F1EA;color:#1E5B2E}
+.chip.soon{background:#F3E9D8;color:var(--gold)}
+.card p{margin:0;color:var(--muted)}
+.feats{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.feats li{font-size:13px;font-weight:500;background:var(--bg);border-radius:999px;padding:6px 11px;color:var(--navy)}
+.card .btn{margin-top:auto;align-self:stretch}
+.card.soon .ico{opacity:.75}
+
+.coach{margin-top:16px;background:var(--navy);color:var(--cream);border-radius:var(--radius);padding:24px;display:grid;gap:16px;align-items:center}
+.coach h2{margin:0;font-size:22px;font-weight:800;line-height:1.2}
+.coach p{margin:6px 0 0;color:#D9D2C6}
+.coach .btn{align-self:stretch}
+
+.social{margin-top:30px}
+.soc{display:grid;gap:10px}
+.soc a{display:flex;align-items:center;gap:14px;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:14px 16px;text-decoration:none;color:var(--navy);min-height:64px;transition:border-color .15s}
+.soc a:hover{border-color:var(--accent)}
+.soc svg{width:24px;height:24px;stroke:var(--accent);fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.soc b{display:block;font:700 15px/1.2 Montserrat,sans-serif}
+.soc span span{display:block;font-size:13px;color:var(--muted)}
+.soc i{margin-left:auto;font-style:normal;color:var(--muted)}
+
+footer{padding:34px 0 max(28px,env(safe-area-inset-bottom));text-align:center;color:var(--muted);font-size:13px}
+footer img{width:44px;height:44px;display:block;margin:0 auto 10px}
+footer .slogan{font:800 14px/1.3 Montserrat,sans-serif;color:var(--navy);margin:0 0 6px}
+footer p{margin:4px 0}
+
+@media (min-width:720px){
+  .hero{padding-bottom:64px}
+  .hero-in{grid-template-columns:1.4fr .8fr;padding-top:56px}
+  .hero-mark{display:block;justify-self:end;width:230px;height:230px;filter:drop-shadow(0 20px 40px rgba(0,0,0,.35))}
+  .apps{grid-template-columns:1fr 1fr}
+  .coach{grid-template-columns:1fr auto;padding:28px 32px}
+  .coach .btn{align-self:center}
+  .soc{grid-template-columns:repeat(2,1fr)}
+  main.wrap{padding-top:52px}
+}
+@media (min-width:980px){.soc{grid-template-columns:repeat(4,1fr)}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
