@@ -12,11 +12,11 @@
 /* Redirige direcciones viejas o mal escritas a la app correcta (conserva ?query y #hash).
    Cambia PRESUPUESTO_LIVE a true cuando balmorehernandez.com/presupuesto/ esté publicada. */
 (function () {
-  var PRESUPUESTO_LIVE = false;
+  var PRESUPUESTO_LIVE = true;
   var p = location.pathname.toLowerCase().replace(/\/+$/, "");
   var rest = location.search + location.hash;
   var fit = /^\/(fitness|fit|app|apps|gym|rutina|app-fitness-principiantes)(\/|$)/;
-  var bud = /^\/(presupuesto|presupuestos|budget|finanzas|finances|dinero|money)(\/|$)/;
+  var bud = /^\/(presupuesto|presupuesto-preview|presupuestos|budget|finanzas|finances|dinero|money)(\/|$)/;
   var to = null;
   if (fit.test(p)) to = "/fitness/";
   else if (bud.test(p)) to = PRESUPUESTO_LIVE ? "/presupuesto/" : "/?soon=presupuesto#app-presupuesto";
@@ -44,6 +44,7 @@
     <div class="btns">
       <a class="btn" href="/" id="b1">Ir al inicio</a>
       <a class="btn alt" href="/fitness/" id="b2">Fitness para principiantes</a>
+      <a class="btn alt" href="/presupuesto/" id="b3">Presupuesto familiar</a>
     </div>
     <p class="mont" lang="en" style="font-weight:800;color:var(--navy);margin-top:6px">Master your body, mind and money.</p>
   </div>
@@ -52,7 +53,7 @@
 try {
   var en = (localStorage.getItem("bhHub_lang") || (navigator.language || "es").slice(0, 2)) === "en";
   if (en) { document.documentElement.lang = "en"; document.title = "Balmore Hernandez · Page not found";
-    h.textContent = "This page doesn't exist"; p.textContent = "The link may be old. Here are my apps:"; b1.textContent = "Go to the home page"; b2.textContent = "Beginner fitness"; }
+    h.textContent = "This page doesn't exist"; p.textContent = "The link may be old. Here are my apps:"; b1.textContent = "Go to the home page"; b2.textContent = "Beginner fitness"; b3.textContent = "Family budget"; }
 } catch (e) {}
 </script>
 </body>
