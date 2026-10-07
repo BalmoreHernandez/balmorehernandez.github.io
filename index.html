@@ -68,6 +68,15 @@
       <ul class="feats"><li data-i18n="budF1">Ingresos y gastos</li><li data-i18n="budF2">Metas de ahorro</li><li data-i18n="budF3">Privado</li></ul>
       <a class="btn app-btn" href="/presupuesto/" data-i18n="open">Abrir la app →</a>
     </article>
+    <article class="card" id="app-invoices" data-app="invoices">
+      <div class="card-top">
+        <div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4"/><path class="a" d="M9 12h6"/><path d="M9 16h6"/></svg></div>
+        <div><h3 data-i18n="invT">Facturas</h3><span class="chip live" data-i18n="live">Gratis · Disponible</span></div>
+      </div>
+      <p data-i18n="invD">Crea facturas claras en un minuto, guárdalas en PDF y lleva el control de quién te debe. Tus datos se quedan privados en tu teléfono.</p>
+      <ul class="feats"><li data-i18n="invF1">PDF listo para enviar</li><li data-i18n="invF2">Clientes y precios</li><li data-i18n="invF3">Privado</li></ul>
+      <a class="btn app-btn" href="/invoices/" data-i18n="open">Abrir la app →</a>
+    </article>
   </div>
 
   <section class="coach" aria-labelledby="coachH">
@@ -92,7 +101,7 @@
 /* ========= CONFIG: edita aquí ========= */
 const CONFIG = {
   // Cambia live a true cuando la app esté publicada en balmorehernandez.com/presupuesto/
-  APPS: { fitness: { live: true }, presupuesto: { live: true } },
+  APPS: { fitness: { live: true }, presupuesto: { live: true }, invoices: { live: true } },
   WHATSAPP: "50366803369",
   WA_TEXT: { es: "Hola Balmore, vengo de tu página web y quiero información sobre el coaching",
              en: "Hi Balmore, I found you through your website and I'd like information about coaching" },
@@ -110,6 +119,7 @@ const I18N = {
     fitF1: "Rutina guiada", fitF2: "Calorías", fitF3: "Reto de 30 días", fitF4: "Funciona sin internet", open: "Abrir la app →",
     budT: "Presupuesto familiar", soon: "Próximamente", budD: "Tu presupuesto y tus finanzas personales y familiares en un solo lugar. Tus datos se quedan privados en tu teléfono.",
     budF1: "Ingresos y gastos", budF2: "Metas de ahorro", budF3: "Privado", soonBtn: "Próximamente",
+    invT: "Facturas", invD: "Crea facturas claras en un minuto, guárdalas en PDF y lleva el control de quién te debe. Tus datos se quedan privados en tu teléfono.", invF1: "PDF listo para enviar", invF2: "Clientes y precios", invF3: "Privado",
     coachH: "¿Quieres resultados más rápido?", coachP: "Trabaja conmigo 1 a 1: plan, seguimiento y apoyo directo por WhatsApp.", coachBtn: "Escríbeme por WhatsApp",
     socH: "Sígueme", foot: "Apps gratis · Tus datos se guardan en tu teléfono.", langBtn: "EN", langAria: "Switch to English",
     desc: "Master your body, mind and money. Apps gratis de Balmore Hernandez para entrenar, comer mejor y ordenar tus finanzas personales y familiares." },
@@ -119,6 +129,7 @@ const I18N = {
     fitF1: "Guided routine", fitF2: "Calories", fitF3: "30-day challenge", fitF4: "Works offline", open: "Open the app →",
     budT: "Family budget", soon: "Coming soon", budD: "Your budget and your personal and family finances in one place. Your data stays private on your phone.",
     budF1: "Income & expenses", budF2: "Savings goals", budF3: "Private", soonBtn: "Coming soon",
+    invT: "Invoices", invD: "Create clear invoices in a minute, save them as PDF and keep track of who owes you. Your data stays private on your phone.", invF1: "PDF ready to send", invF2: "Clients & prices", invF3: "Private",
     coachH: "Want faster results?", coachP: "Work with me 1-on-1: a plan, check-ins and direct support on WhatsApp.", coachBtn: "Message me on WhatsApp",
     socH: "Follow me", foot: "Free apps · Your data is saved on your phone.", langBtn: "ES", langAria: "Cambiar a español",
     desc: "Master your body, mind and money. Free apps by Balmore Hernandez to train, eat better and organize your personal and family finances." }

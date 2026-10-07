@@ -17,9 +17,11 @@
   var rest = location.search + location.hash;
   var fit = /^\/(fitness|fit|app|apps|gym|rutina|app-fitness-principiantes)(\/|$)/;
   var bud = /^\/(presupuesto|presupuesto-preview|presupuestos|budget|finanzas|finances|dinero|money)(\/|$)/;
+  var inv = /^\/(invoices|invoice|facturas|factura)(\/|$)/;
   var to = null;
   if (fit.test(p)) to = "/fitness/";
   else if (bud.test(p)) to = PRESUPUESTO_LIVE ? "/presupuesto/" : "/?soon=presupuesto#app-presupuesto";
+  else if (inv.test(p)) to = "/invoices/";
   else if (/^\/(inicio|home|index\.html?|links?)$/.test(p)) to = "/";
   if (to && to.indexOf("?") < 0) to += rest;
   if (to && to !== location.pathname + rest) location.replace(to);
@@ -45,6 +47,7 @@
       <a class="btn" href="/" id="b1">Ir al inicio</a>
       <a class="btn alt" href="/fitness/" id="b2">Fitness para principiantes</a>
       <a class="btn alt" href="/presupuesto/" id="b3">Presupuesto familiar</a>
+      <a class="btn alt" href="/invoices/" id="b4">Facturas</a>
     </div>
     <p class="mont" lang="en" style="font-weight:800;color:var(--navy);margin-top:6px">Master your body, mind and money.</p>
   </div>
@@ -53,7 +56,7 @@
 try {
   var en = (localStorage.getItem("bhHub_lang") || (navigator.language || "es").slice(0, 2)) === "en";
   if (en) { document.documentElement.lang = "en"; document.title = "Balmore Hernandez · Page not found";
-    h.textContent = "This page doesn't exist"; p.textContent = "The link may be old. Here are my apps:"; b1.textContent = "Go to the home page"; b2.textContent = "Beginner fitness"; b3.textContent = "Family budget"; }
+    h.textContent = "This page doesn't exist"; p.textContent = "The link may be old. Here are my apps:"; b1.textContent = "Go to the home page"; b2.textContent = "Beginner fitness"; b3.textContent = "Family budget"; b4.textContent = "Invoices"; }
 } catch (e) {}
 </script>
 </body>

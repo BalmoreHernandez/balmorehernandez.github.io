@@ -8,7 +8,8 @@ Every other Pages repo of the account without its own CNAME is served under this
 | Path | Repo | Status |
 |---|---|---|
 | `/fitness/` | `BalmoreHernandez/fitness` | live |
-| `/presupuesto/` | `BalmoreHernandez/presupuesto` (to create) | coming soon |
+| `/presupuesto/` | `BalmoreHernandez/presupuesto` | live |
+| `/invoices/` | `BalmoreHernandez/invoices` | live |
 
 ## Editing
 - `index.html` → `CONFIG.APPS.presupuesto.live = true` when `/presupuesto/` is published (card turns into an "Open the app" button).
@@ -21,3 +22,6 @@ All apps share the origin `balmorehernandez.com`: each app must use its own loca
 
 ## DNS (GoDaddy)
 `@` A → 185.199.108.153, 185.199.109.153, 185.199.110.153, 185.199.111.153 · `@` AAAA → 2606:50c0:8000::153 … 8003::153 · `www` CNAME → balmorehernandez.github.io
+
+## Change log
+- 2026-10-07 — Added the Invoices card (`/invoices/`), its 404 redirects and the table row — Nico (Claude Cowork)
